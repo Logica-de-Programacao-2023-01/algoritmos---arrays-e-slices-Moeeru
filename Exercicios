@@ -1,0 +1,59 @@
+Exercicio 1
+package main
+
+import "fmt"
+
+func main() {
+	var lista []int
+	extra := 0
+	soma := 0
+	for i := 0; i < 3; i++ {
+		fmt.Println("Digite um número para a lista: ")
+		fmt.Scan(&extra)
+		lista = append(lista, extra)
+		soma += extra
+	}
+	fmt.Printf("Na lista %d temos como somatório dos números %d", lista, soma)
+}
+
+Exercicio 2
+package main
+
+import "fmt"
+
+func main() {
+	var lista = []int{1, 2, 3, 4, 5}
+	lista = append(lista[:2], lista[3:]...)
+	fmt.Println(lista)
+}
+Exercicio 3
+package main
+
+import "fmt"
+
+func main() {
+	var lista = []float64{1, 2, 3, 4}
+	produto := 1.0
+	for i := 0; i < 4; i++ {
+		produto *= lista[i]
+	}
+	fmt.Println(produto)
+}
+
+Exercicio 4
+Exercicio 5
+Exercicio 6
+Exercicio 7
+Exercicio 8
+Exercicio 9
+Exercicio 10
+Exercicio 11
+Exercicio 12
+Exercicio 13
+Exercicio 14
+Exercicio 15
+Exercicio 16
+Exercicio 17
+Exercicio 18
+Exercicio 19
+Exercicio 20
