@@ -41,8 +41,69 @@ func main() {
 }
 
 Exercicio 4
+package main
+
+import "fmt"
+
+func main() {
+	var lista []int
+	tamanho := 0
+	termo := 0
+	soma := 0
+	fmt.Println("Digite qual o tamanho da lista desejado: ")
+	fmt.Scan(&tamanho)
+	for i := 0; i < tamanho; i++ {
+		fmt.Println("Digite o número a ser adicionado: ")
+		fmt.Scan(&termo)
+		soma += termo
+		lista = append(lista, termo)
+	}
+	fmt.Printf("Na lista criada %d com %d termos tem como soma de seu conteudo %d",
+		lista, termo, soma)
+}
+
 Exercicio 5
+package main
+
+import "fmt"
+
+func main() {
+	var matriz [3][2]int
+	termo := 0
+	for linha := range matriz {
+		for coluna := range matriz[linha] {
+			fmt.Printf("Digite o termo da coluna %d e linha %d: ", coluna, linha)
+			fmt.Scan(&termo)
+			matriz[linha][coluna] = termo
+		}
+	}
+	for i := 0; i < len(matriz); i++ {
+		fmt.Println(matriz[i])
+	}
+}
+
 Exercicio 6
+package main
+
+import "fmt"
+
+func main() {
+	var lista = [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	termouser := 0
+	validação := 0
+	fmt.Print("Digite um número para ver se está na lista: ")
+	fmt.Scan(&termouser)
+	for i := 0; i < len(lista); i++ {
+		if termouser == lista[i] {
+			fmt.Printf("O item está na lista na posição %d", i)
+			validação++
+		}
+	}
+	if validação < 1 {
+		fmt.Println("O item não está na lista")
+	}
+}
+
 Exercicio 7
 Exercicio 8
 Exercicio 9
