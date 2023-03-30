@@ -203,7 +203,50 @@ func main() {
 }
 
 Exercicio 11
+package main
+
+import "fmt"
+
+func main() {
+	matriz := [2][3]int{{1, 2, 3}, {4, 5, 6}}
+	linha := 0
+	coluna := 0
+	for i := 1; i > 0; i++ {
+		fmt.Print("Digite a coluna do termo desejado [De 1 á 3]: ")
+		fmt.Scan(&coluna)
+		fmt.Print("Digite a linha do termo [1 ou 2]: ")
+		fmt.Scan(&linha)
+		if coluna <= 3 && linha <= 2 && coluna > 0 && linha > 0 {
+			fmt.Printf("O elemento escontrado na coluna %d e na linha %d é o numero %d",
+				coluna, linha, matriz[linha-1][coluna-1])
+			break
+		} else {
+			fmt.Println("opções inválidas, tente novamente")
+		}
+	}
+}
+
 Exercicio 12
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func main() {
+	array := [5]int{rand.Intn(100), rand.Intn(100), rand.Intn(100),
+		rand.Intn(100), rand.Intn(100)}
+	var slice []int
+	for i := 0; i < len(array); i++ {
+		if array[i]%3 == 0 {
+			slice = append(slice, array[i])
+		}
+	}
+	fmt.Printf("Sua lista de com números divisiveis por 3 baseada na lista aleatória %d é %d",
+		array, slice)
+}
+
 Exercicio 13
 Exercicio 14
 Exercicio 15
