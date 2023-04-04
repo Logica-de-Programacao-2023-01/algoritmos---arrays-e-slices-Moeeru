@@ -294,8 +294,61 @@ func main() {
 }
 
 Exercicio 15
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var lista = []float64{1.1, 1.4, 10.5, 5.2, 8.3, 3.0, 4.9, 5.01, 8.09, 3.4}
+	var slice []float64
+	for i := 0; i < len(lista); i++ {
+		if lista[i] > 5 {
+			slice = append(slice, lista[i])
+		}
+	}
+	fmt.Printf("A lista %.2f tem como lista dos números com valor superior que 5 são %.2f", lista, slice)
+}
+
 Exercicio 16
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func main() {
+	var lista = []int{rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100),
+		rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100)}
+	var slice []int
+	for i := 0; i < len(lista); i++ {
+		if lista[i]%2 == 0 {
+			slice = append(slice, lista[i])
+		}
+	}
+	fmt.Printf("A lista %d tem como lista dos números pares %d", lista, slice)
+}
+
 Exercicio 17
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func main() {
+	var lista = []int{rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100),
+		rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100)}
+	soma := 0
+	for i := 0; i < len(lista); i += 2 {
+		soma += lista[i]
+	}
+	fmt.Printf("A lista %d tem como soma dos números nos indices pares %d", lista, soma)
+}
+
 Exercicio 18
 Exercicio 19
 Exercicio 20
