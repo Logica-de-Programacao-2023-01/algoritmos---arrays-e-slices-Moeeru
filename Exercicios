@@ -248,6 +248,27 @@ func main() {
 }
 
 Exercicio 13
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func main() {
+	array := [7]int{0, rand.Intn(100), rand.Intn(100), rand.Intn(100),
+		rand.Intn(100), rand.Intn(100), 0}
+	n1 := 0
+	n2 := 0
+	fmt.Print("digite o número que ficará no ínicio: ")
+	fmt.Scan(&n1)
+	array[0] = n1
+	fmt.Print("digite o número que ficará no final: ")
+	fmt.Scan(&n2)
+	array[6] = n2
+	fmt.Printf("O array final ficou %d", array)
+}
+
 Exercicio 14
 Exercicio 15
 Exercicio 16
