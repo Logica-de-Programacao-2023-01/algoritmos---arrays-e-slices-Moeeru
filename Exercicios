@@ -270,6 +270,29 @@ func main() {
 }
 
 Exercicio 14
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+func main() {
+	array := [8]int{rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100),
+		rand.Intn(100), rand.Intn(100), rand.Intn(100), rand.Intn(100)}
+	n1 := 0
+	n2 := 0
+	salve := 0
+	fmt.Print("digite o indice que será trocado [1 á 8]: ")
+	fmt.Scan(&n1)
+	fmt.Print("digite o indice que será trocado [1 á 8]: ")
+	fmt.Scan(&n2)
+	salve = array[n1-1]
+	array[n1-1] = array[n2-1]
+	array[n2-1] = salve
+	fmt.Printf("O array final ficou %d", array)
+}
+
 Exercicio 15
 Exercicio 16
 Exercicio 17
